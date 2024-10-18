@@ -1,15 +1,38 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
+        Metodos metodos = new Metodos(); // Crear una instancia de Metodos
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        System.out.println("¿Qué deseas hacer?\n" +
+                "1. Agregar Libro\n" +
+                "2. Eliminar Libro\n" +
+                "3. Ver Libro\n" +
+                "4. Ver todos los libros\n" +
+                "5. Actualizar Libro");
+
+        int decision = scanner.nextInt();
+
+        switch (decision) {
+            case 1:
+                metodos.agregar();
+                break;
+            case 2:
+                metodos.eliminar();
+                break;
+            case 3:
+                metodos.VerLibro();
+                break;
+            case 4:
+                metodos.VerTodos();
+                break;
+            case 5:
+                metodos.ActualizarLibro();
+                break;
+            default:
+                System.out.println("Opción no válida.");
+                break;
         }
     }
 }

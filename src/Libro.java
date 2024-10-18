@@ -1,10 +1,10 @@
-public class libro {
+public class Libro {
     public int id ;
     public  String titulo ;
     public  String autor ;
     public  int anoPublication;
 
-    public libro(String titulo,String autor ,int anoPublication){
+    public Libro( int id,String titulo, String autor , int anoPublication){
         this.titulo = titulo ;
         this.autor = autor;
         this.anoPublication =anoPublication;
@@ -45,7 +45,7 @@ public class libro {
 
     @Override
     public String toString() {
-        return "libro{" +
+        return "Libro{" +
                 "id=" + id +
                 ", titulo='" + titulo + '\'' +
                 ", autor='" + autor + '\'' +
